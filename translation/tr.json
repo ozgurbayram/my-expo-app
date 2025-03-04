@@ -1,0 +1,59 @@
+{
+  "common": {
+    "back": "Geri",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "play": "Oynat",
+    "pause": "Duraklat",
+    "save": "Kaydet",
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı"
+  },
+  "home": {
+    "title": "Videolarım",
+    "emptyList": "Video bulunamadı. Başlamak için yeni bir kırpma oluşturun.",
+    "createNewCrop": "Yeni Kırpma Oluştur",
+    "english": "EN",
+    "turkish": "TR"
+  },
+  "crop": {
+    "title": "Video Kırp",
+    "selectPortion": "Saklamak istediğiniz video bölümünü seçin",
+    "adjustClipLength": "Klip Uzunluğunu Ayarla",
+    "preparingVideo": "Video hazırlanıyor...",
+    "start": "Başlangıç",
+    "end": "Bitiş",
+    "cropVideo": "Videoyu Kırp"
+  },
+  "save": {
+    "title": "Kırpmanızı Kaydedin",
+    "preview": "Kaydetmeden önce kırpılmış videonuzu önizleyin ve detayları ekleyin",
+    "processingVideo": "Video işleniyor...",
+    "previewWillAppear": "Önizleme burada görünecek",
+    "videoDetails": "Video Detayları",
+    "titleLabel": "Başlık",
+    "titlePlaceholder": "Videonuz için bir başlık girin",
+    "titleRequired": "Başlık gereklidir",
+    "descriptionLabel": "Açıklama",
+    "descriptionPlaceholder": "Kısa bir açıklama ekleyin",
+    "descriptionRequired": "Açıklama gereklidir",
+    "duration": "Süre",
+    "seconds": "sn",
+    "saveVideo": "Videoyu Kaydet"
+  },
+  "detail": {
+    "title": "Video Detayları",
+    "videoNotFound": "Video bulunamadı",
+    "description": "Açıklama",
+    "noDescription": "Açıklama bulunmuyor",
+    "deleteConfirmTitle": "Videoyu Sil",
+    "deleteConfirmMessage": "Bu videoyu silmek istediğinizden emin misiniz?",
+    "unknownDuration": "Bilinmeyen süre"
+  },
+  "notFound": {
+    "title": "Ups!",
+    "message": "Bu sayfa mevcut değil.",
+    "goHome": "Ana sayfaya git!"
+  }
+}

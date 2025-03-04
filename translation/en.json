@@ -1,8 +1,59 @@
 {
-  "button": {
-    "french": "Switch language to French",
-    "english": "Switch language to English"
+  "common": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "play": "Play",
+    "pause": "Pause",
+    "save": "Save",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
   },
-  "getStarted": "Open up the code for this screen:",
-  "changeCode": "Change any of the text, save the file, and your app will automatically update."
+  "home": {
+    "title": "My Videos",
+    "emptyList": "No videos found. Create a new crop to get started.",
+    "createNewCrop": "Create New Crop",
+    "english": "EN",
+    "turkish": "TR"
+  },
+  "crop": {
+    "title": "Crop Video",
+    "selectPortion": "Select the portion of the video you want to keep",
+    "adjustClipLength": "Adjust Clip Length",
+    "preparingVideo": "Preparing video...",
+    "start": "Start",
+    "end": "End",
+    "cropVideo": "Crop Video"
+  },
+  "save": {
+    "title": "Save Your Crop",
+    "preview": "Preview your cropped video and add details before saving",
+    "processingVideo": "Processing video...",
+    "previewWillAppear": "Preview will appear here",
+    "videoDetails": "Video Details",
+    "titleLabel": "Title",
+    "titlePlaceholder": "Enter a title for your video",
+    "titleRequired": "Title is required",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Add a short description",
+    "descriptionRequired": "Description is required",
+    "duration": "Duration",
+    "seconds": "s",
+    "saveVideo": "Save Video"
+  },
+  "detail": {
+    "title": "Video Details",
+    "videoNotFound": "Video not found",
+    "description": "Description",
+    "noDescription": "No description available",
+    "deleteConfirmTitle": "Delete Video",
+    "deleteConfirmMessage": "Are you sure you want to delete this video?",
+    "unknownDuration": "Unknown duration"
+  },
+  "notFound": {
+    "title": "Oops!",
+    "message": "This screen doesn't exist.",
+    "goHome": "Go to home screen!"
+  }
 }
