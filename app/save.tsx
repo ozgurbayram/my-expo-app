@@ -1,4 +1,4 @@
-import { ResizeMode, Video } from 'expo-av';
+import { ResizeMode } from 'expo-av';
 import { router, useLocalSearchParams, useNavigation } from 'expo-router';
 import { CheckCircle2 } from 'lucide-react-native';
 import React, { useEffect, useLayoutEffect, useState } from 'react';
@@ -9,6 +9,7 @@ import { ScrollView, Text, View } from 'react-native';
 import BaseText from '~/components/BaseText';
 import Button from '~/components/Button';
 import Input from '~/components/Input';
+import { BaseVideo } from '~/components/ui';
 import { useCropVideo } from '~/hooks/useCropVideo';
 import { useSaveVideo } from '~/hooks/useSaveVideo';
 
@@ -87,9 +88,9 @@ const Save = () => {
 
         {croppedVideoUri ? (
           <View className="mb-6 overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
-            <Video
-              source={{ uri: croppedVideoUri }}
-              style={{ width: '100%', height: 220 }}
+            <BaseVideo
+              uri={croppedVideoUri}
+              height={220}
               shouldPlay
               useNativeControls
               isMuted

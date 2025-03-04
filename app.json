@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "my-expo-app",
-    "slug": "my-expo-app",
+    "name": "Video Editor",
+    "slug": "video-editor",
     "version": "1.0.0",
-    "scheme": "my-expo-app",
+    "scheme": "video-editor",
     "web": {
       "bundler": "metro",
       "output": "static",
@@ -29,6 +29,13 @@
         {
           "enableFFmpegKit": true
         }
+      ],
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
       ]
     ],
     "experiments": {
@@ -43,12 +50,10 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.ozgurbayramhl.myexpoapp"
+      "bundleIdentifier": "com.ozgurbayram.videoeditor"
     },
     "android": {
       "adaptiveIcon": {
@@ -59,7 +64,7 @@
         "android.permission.RECORD_AUDIO",
         "android.permission.MODIFY_AUDIO_SETTINGS"
       ],
-      "package": "com.ozgurbayramhl.myexpoapp"
+      "package": "com.ozgurbayram.videoeditor"
     }
   }
 }

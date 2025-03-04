@@ -1,4 +1,4 @@
-import { AVPlaybackStatus, ResizeMode, Video } from 'expo-av';
+import { AVPlaybackStatus, ResizeMode } from 'expo-av';
 import { router, useLocalSearchParams, useNavigation } from 'expo-router';
 import { Scissors } from 'lucide-react-native';
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
@@ -8,12 +8,13 @@ import { ActivityIndicator, ScrollView, View } from 'react-native';
 import BaseText from '~/components/BaseText';
 import Button from '~/components/Button';
 import Cropper, { CropperRef } from '~/components/Cropper';
+import { BaseVideo, BaseVideoRef } from '~/components/ui';
 import { getVideoDuration, initFFmpeg } from '~/utils/ffmpeg.utils';
 
 const Crop = () => {
   const { videoUri } = useLocalSearchParams<{ videoUri: string }>();
   const navigation = useNavigation();
-  const videoRef = useRef<Video>(null);
+  const videoRef = useRef<BaseVideoRef>(null);
   const [duration, setDuration] = useState<number>(0);
   const cropperRef = useRef<CropperRef>(null);
   const [isUserSeeking, setIsUserSeeking] = useState(false);
@@ -52,7 +53,7 @@ const Crop = () => {
   const handleSelectionEnd = async (startTime: number, endTime: number) => {
     if (videoRef.current) {
       setIsUserSeeking(true);
-      await videoRef.current.setPositionAsync(startTime * 1000);
+      await videoRef.current.setPosition(startTime * 1000);
       setIsUserSeeking(false);
     }
   };
@@ -68,7 +69,7 @@ const Crop = () => {
 
     if (status.isPlaying && (currentTime < startTime || currentTime > endTime)) {
       setIsUserSeeking(true);
-      videoRef.current?.setPositionAsync(startTime * 1000).then(() => {
+      videoRef.current?.setPosition(startTime * 1000).then(() => {
         setIsUserSeeking(false);
       });
     }
@@ -108,10 +109,10 @@ const Crop = () => {
               </BaseText>
             </View>
           ) : (
-            <Video
+            <BaseVideo
               ref={videoRef}
-              source={{ uri: videoUri as string }}
-              style={{ width: '100%', height: 240 }}
+              uri={videoUri as string}
+              height={240}
               resizeMode={ResizeMode.CONTAIN}
               isLooping={false}
               isMuted

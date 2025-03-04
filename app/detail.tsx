@@ -1,4 +1,4 @@
-import { ResizeMode, Video } from 'expo-av';
+import { ResizeMode } from 'expo-av';
 import { router, useLocalSearchParams, useNavigation } from 'expo-router';
 import { CalendarIcon, ClockIcon, InfoIcon, TrashIcon } from 'lucide-react-native';
 import React, { useLayoutEffect, useRef, useState } from 'react';
@@ -7,6 +7,7 @@ import { ActivityIndicator, Alert, ScrollView, View } from 'react-native';
 
 import BaseText from '~/components/BaseText';
 import Button from '~/components/Button';
+import { BaseVideo, BaseVideoRef } from '~/components/ui';
 import { useFetchVideo } from '~/hooks/useFetchVideo';
 import { useRemoveVideo } from '~/hooks/useRemoveVideo';
 
@@ -15,7 +16,7 @@ const Detail = () => {
   const navigation = useNavigation();
   const { data: video, isLoading } = useFetchVideo(videoId);
   const { mutate: removeVideo, isPending } = useRemoveVideo();
-  const videoRef = useRef<Video>(null);
+  const videoRef = useRef<BaseVideoRef>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const { t } = useTranslation();
 
@@ -40,9 +41,9 @@ const Detail = () => {
     if (!videoRef.current) return;
 
     if (isPlaying) {
-      await videoRef.current.pauseAsync();
+      await videoRef.current.pause();
     } else {
-      await videoRef.current.playAsync();
+      await videoRef.current.play();
     }
 
     setIsPlaying(!isPlaying);
@@ -84,10 +85,10 @@ const Detail = () => {
   return (
     <ScrollView className="flex-1 bg-white">
       <View className="relative w-full">
-        <Video
+        <BaseVideo
           ref={videoRef}
-          source={{ uri: video.videoUri || '' }}
-          style={{ width: '100%', height: 240 }}
+          uri={video.videoUri || ''}
+          height={240}
           useNativeControls
           resizeMode={ResizeMode.CONTAIN}
           isLooping
