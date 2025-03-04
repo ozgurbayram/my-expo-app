@@ -68,6 +68,17 @@ my-expo-app/
 - Modern and user-friendly interface
 - Responsive design
 
+## App Screenshots
+
+<div align="center">
+  <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px;">
+    <img src="./files/home.png" alt="Home Screen" width="180"/>
+    <img src="./files/list.png" alt="Video List" width="180"/>
+    <img src="./files/crop.png" alt="Crop Video" width="180"/>
+    <img src="./files/save.png" alt="Save Video" width="180"/>
+  </div>
+</div>
+
 ## Installation and Running
 
 ### Requirements
