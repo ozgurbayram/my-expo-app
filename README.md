@@ -94,12 +94,20 @@ my-expo-app/
 
 3. Start the application:
 
+   4. Run prebuild to generate native projects:
+
+   ```bash
+   yarn prebuild
+   ```
+
+   This step is required before running on iOS or Android for the first time, or after adding native dependencies.
+
    ```bash
    # To run on iOS simulator
-   yarn ios
+   yarn run ios
 
    # To run on Android emulator
-   yarn android
+   yarn run android
 
    # To start the development server
    yarn start
@@ -116,15 +124,6 @@ my-expo-app/
 ### Building and Distribution
 
 Building and distribution can be done using Expo EAS (Expo Application Services):
-
-```bash
-# Preparation before building
-yarn prebuild
-
-# Expo CLI is used for building and distribution
-eas build --platform ios
-eas build --platform android
-```
 
 ## License
 
