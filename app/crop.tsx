@@ -77,20 +77,13 @@ const Crop = () => {
   const handleCrop = () => {
     const startTime = cropperRef.current?.getStartTime();
     const endTime = cropperRef.current?.getEndTime();
+    console.log('startTime', startTime);
+    console.log('endTime', endTime);
+
     router.push({
       pathname: '/save',
       params: { startTime, endTime, videoUri },
     });
-  };
-
-  const togglePlayback = async () => {
-    if (!videoRef.current) return;
-
-    if (isPlaying) {
-      await videoRef.current.pauseAsync();
-    } else {
-      await videoRef.current.playAsync();
-    }
   };
 
   const formatTime = (seconds: number) => {

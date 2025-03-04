@@ -41,7 +41,7 @@ const Save = () => {
     try {
       save(
         {
-          videoUri: videoUri as string,
+          videoUri: croppedVideoUri as string,
           name: data.name,
           description: data.description,
           duration: Number(endTime) - Number(startTime),
@@ -97,7 +97,8 @@ const Save = () => {
             />
             <View className="p-3">
               <Text className="text-xs text-slate-500">
-                {t('save.duration')}: {((Number(endTime) - Number(startTime)) / 1000).toFixed(1)}{t('save.seconds')}
+                {t('save.duration')}: {((Number(endTime) - Number(startTime)) / 1000).toFixed(1)}
+                {t('save.seconds')}
               </Text>
             </View>
           </View>

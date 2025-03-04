@@ -18,6 +18,10 @@ const App = () => {
   const { videos, fetchVideos } = useVideoStore();
   const { t } = useTranslation();
 
+  const handleReload = () => {
+    fetchVideos();
+  };
+
   const pickVideo = async () => {
     const result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ['videos'],
@@ -88,6 +92,8 @@ const App = () => {
           return <VideoItem key={item.id} video={item} />;
         }}
         ListEmptyComponent={EmptyListComponent}
+        onRefresh={handleReload}
+        refreshing={false}
       />
     </View>
   );
